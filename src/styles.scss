@@ -1,1 +1,175 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --main-purple: #635fc7;
+    --main-purple-hover: #a8a4ff;
+    --black: #000112;
+    --very-dark-grey: #20212c;
+    --dark-grey: #2b2c37;
+    --dark: #3e3f4e;
+    --medium-grey: #828fa3;
+    --light: #e4ebfa;
+    --light-grey: f4f7fd;
+    --white: #fff;
+    --red: #ea555;
+    --red-hover: #ff9898;
+
+    --bgButtonPrimaryLarge: var(--main-purple);
+    --bgButtonPrimaryLargeHover: var(--main-purple-hover);
+    --bgButtonPrimarySmall: var(--main-purple);
+    --bgButtonPrimarySmallHover: var(--main-purple-hover);
+    --bgButtonSecondary: null;
+    --bgButtonSecondaryHover: null;
+    --bgButtonDestructive: var(--red);
+    --bgButtonDestructiveHover: var(--red-hover);
+
+    --colorButtonPrimaryLarge: var(--white);
+    --colorButtonPrimarySmall: var(--white);
+    --colorButtonSecondary: var(--main-purple);
+    --colorButtonSecondaryHover: var(--main-purple);
+    --colorButtonDestructive: var(--white);
+    --colorButtonDestructiveHover: var(--white);
+    --colorButtonPrimaryLargeHover: var(--white);
+    --colorButtonPrimarySmallHover: var(--white);
+
+
+}
+
+.heading-xl {
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3rem;
+}
+
+.heading-l {
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+}
+
+.heading-m {
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.9rem;
+}
+
+.heading-s {
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    font-kerning: 2.4px;
+}
+
+.body-l {
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 500;
+    font-size: 1.3rem;
+    line-height: 2.3rem;
+}
+
+.body-m {
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+
+$bgColor_light: var(--white);
+$bgColor_dark: var(--dark-grey);
+
+$buttonSecondaryBg_light: rgba(99, 95, 199, 0.1);
+$buttonSecondaryBg_dark: var(--white);
+
+
+
+// mixin that enables css variables in light mode
+@mixin lighten() {
+    --bgColor: #{$bgColor_light};
+    --bgButtonSecondary: #{$buttonSecondaryBg_light};
+}
+
+// mixin that enables css variables in dark mode
+@mixin darken() {
+    --bgColor: #{$bgColor_dark};
+    --bgButtonSecondary: #{$buttonSecondaryBg_dark};
+}
+
+body.dark {
+    @include darken();
+}
+
+body.light {
+    @include lighten();
+}
+
+button {
+    border: none;
+}
+
+.btn-primary-lg {
+    @extend .heading-m;
+
+    border-radius: 2.4rem;
+    height: 4.8rem;
+    min-width: 25.5rem;
+    background-color: var(--bgButtonPrimaryLarge);
+    color: var(--colorButtonPrimaryLarge);
+
+
+    &:hover {
+        background-color: var(--bgButtonPrimaryLargeHover);
+        color: var(--colorButtonPrimaryLargeHover);
+    }
+}
+
+.btn-primary-sm {
+    border-radius: 2rem;
+    height: 4rem;
+    min-width: 25.5rem;
+    background-color: var(--bgButtonPrimarySmall);
+    color: var(--colorButtonPrimarySmall);
+    font-size: 1.3rem;
+    line-height: 2.3rem;
+    font-weight: 700;
+
+    &:hover {
+        background-color: var(--bgButtonPrimarySmallHover);
+        color: var(--colorButtonPrimarySmallHover);
+    }
+}
+
+.btn-secondary {
+    border-radius: 2rem;
+    height: 4rem;
+    min-width: 25.5rem;
+    background-color: var(--bgButtonSecondary);
+    color: var(--colorButtonSecondary);
+
+    &:hover {
+        background-color: var(--bgButtonSecondaryHover);
+        color: var(--colorButtonSecondaryHover);
+    }
+}
+
+.btn-destructive {
+    border-radius: 2rem;
+    height: 4rem;
+    min-width: 25.5rem;
+    background-color: var(--bgButtonDestructive);
+    color: var(--colorButtonDestructive);
+
+    &:hover {
+        background-color: var(--bgButtonDestructiveHover);
+        color: var(--colorButtonDestructiveHover);
+    }
+}
