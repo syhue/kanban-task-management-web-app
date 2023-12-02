@@ -1,6 +1,8 @@
 # KanbanTaskManagementWebApp
 
-## Checklist
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+
+## Progress Checklist
 
 - [ ] Style setup.
 - [ ] Dark mode toggle component.
@@ -11,8 +13,6 @@
 - [ ] Layout Setup
   - [ ] Toggle Side Bar
   - [ ] Responsiveness
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
 
 ## Development server
 
