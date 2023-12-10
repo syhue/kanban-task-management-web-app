@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 -   [ ] Style setup.
 -   [ ] Mode toggle shared component.
-    -   [ x ] UI done.
+    -   [x] UI done.
     -   [ ] Spec done.
 -   [ ] Interactive Element
     -   [ ] Subtask checkbox
